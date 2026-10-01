@@ -1,0 +1,120 @@
+body{
+    background-color: #121212;
+}
+#logo{
+    width:32px;
+    height:32px;
+    margin:105px auto 0 auto
+}
+#welcome{
+    color: white;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 32px;
+}
+#email{
+    background-color:#121212;
+}
+label{
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+}
+#forma{
+    width: 324px;
+    font-weight: bold;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    margin-bottom: 9px;
+}
+#email{
+    width: 324px;
+    height: 48px;
+    border: 1px solid grey;
+    display: block;
+    margin-bottom: 10px;
+}
+#gumbzelen{
+    background-color: #1ed760;
+    color: black;
+    font-size: 16px;
+    font-weight:bold;
+    border-radius: 9999px;
+    width: 324px;
+    height: 48px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+#or{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-weight: 400;
+}
+#skupinabutton{
+    width: 324px;
+    height: 160px;
+    margin: 0 auto 0 auto;
+}
+.gumbi{
+    width: 324px;
+    height: 48px;
+    border: 1px solid grey;
+    border-radius: 9999px;
+    background-color:#121212;
+    color: white;
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: 700;
+}
+#slikica{
+    width: 20px;
+    height: 20px;
+}
+#acc{
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 4px;
+}
+#reg{
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+}
+#konec{
+    color: #b3b3b3;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 400;
+}
+#konec a{
+    text-decoration: underline;
+}
+#konec a:hover{
+    color: #1ed760;
+}
+#konec a:visited{
+    color: #b3b3b3;
+}
+#glavni{
+    width: 388px;
+    height: 885px;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
