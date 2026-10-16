@@ -126,7 +126,7 @@ label {
 }
 #reg {
     text-align: center;
-    margin-bottom: 125px;
+    margin-bottom: 270px;
 }
 #reg a {
     color: white;
@@ -145,6 +145,8 @@ label {
     text-align: center;
     width: 100%;
     font-family: 'Spotifyregular', sans-serif;
+    position: fixed;
+    bottom: 25px;
 }
 #konec a {
     text-decoration: underline;

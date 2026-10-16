@@ -1,6 +1,7 @@
 body {
     background-color: #121212;
     margin: 0;
+    display: flex;
 }
 #logo {
     width: 32px;
@@ -121,7 +122,7 @@ label {
     font-size: 16px;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 125px;
+    margin-bottom: 270px;
     font-family: 'Spotifybold', sans-serif;
 }
 #reg a {
@@ -139,6 +140,8 @@ label {
     font-weight: 400;
     width: 100%;
     font-family: 'Spotifyregular', sans-serif;
+    position: fixed;
+    bottom: 25px;
 }
 #konec a {
     text-decoration: underline;
