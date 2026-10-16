@@ -135,6 +135,7 @@ label {
     font-family: 'Spotifybold', sans-serif;
     transition:transform 0.1s ease;
     display: inline-block;
+    text-decoration: none;
 }
 #reg a:hover{
     transform: scale(1.10);
