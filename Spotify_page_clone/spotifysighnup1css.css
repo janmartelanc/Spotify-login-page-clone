@@ -59,6 +59,7 @@ body {
     color: #a7a7a7;
     font-size: 14px;
     font-weight: 400;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .back-arrow {
@@ -84,6 +85,7 @@ body {
     font-weight: 700;
     margin: 0 0 24px 0;
     letter-spacing: -0.5px;
+    font-family: 'Spotifybold',sans-serif;
 }
 
 /* Step Switching */
@@ -105,6 +107,7 @@ label {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 8px;
+    font-family: 'Spotifybold', sans-serif;
 }
 
 .input-subtitle {
@@ -112,6 +115,7 @@ label {
     color: #b3b3b3;
     margin-bottom: 8px;
     line-height: 1.4;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .input-wrapper {
@@ -132,6 +136,7 @@ select {
     font-size: 14px;
     outline: none;
     transition: border-color 0.2s;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 input[type="text"]:focus,
@@ -161,6 +166,7 @@ input.error, select.error {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 12px;
+    font-family: 'Spotifybold', sans-serif;
 }
 
 .requirements-list {
@@ -169,6 +175,7 @@ input.error, select.error {
     margin: 0 0 24px 0;
     font-size: 14px;
     color: #ffffff;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .requirements-list li {
@@ -231,6 +238,7 @@ select {
     font-weight: 400;
     cursor: pointer;
     margin-bottom: 0;
+    font-family: 'Spotifybold', sans-serif;
 }
 
 .radio-label input[type="radio"] {
@@ -275,6 +283,7 @@ select {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.4;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .checkbox-box input[type="checkbox"] {
@@ -320,6 +329,7 @@ select {
     color: white;
     line-height: 1.5;
     margin: 16px 0 24px 0;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .legal-text p {
@@ -345,6 +355,7 @@ select {
     cursor: pointer;
     margin-top: 8px;
     transition: transform 0.1s ease, background-color 0.1s ease;
+    font-family: 'Spotifybold', sans-serif;
 }
 
 .btn-submit:hover {
@@ -361,9 +372,23 @@ select {
     padding-bottom: 24px;
     line-height: 1.4;
     font-weight: 400;
+    font-family: 'Spotifyregular', sans-serif;
 }
 
 .recaptcha-footer a {
     color: #a7a7a7;
     text-decoration: underline;
+}
+
+@font-face {
+    font-family: 'Spotifytitle';
+    src: url('fonts/SpotifyMixUITitle-Extrabold-0c5c3edc175e50c855f03b34606885ef.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Spotifyregular';
+    src: url('fonts/SpotifyMixUI-Regular-76c92fb1a35c462f73429fa8865163eb.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Spotifybold';
+    src: url('fonts/SpotifyMixUI-Bold-09c45a3a0ce9d2971e62cb26e97760fb.woff2') format('woff2');
 }
