@@ -1,62 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
+const dayInput = document.getElementById('dob-day');
+const yearInput = document.getElementById('dob-year');
+[dayInput, yearInput].forEach(input => {
+    if (input) {
+        input.addEventListener('input', () => {
+            input.value = input.value.replace(/\D/g, '');
+        });
+    }
+});
     let currentStep = 1;
-
-    // Elements
     const progressBar = document.getElementById('progress-bar');
     const stepCounter = document.getElementById('step-counter');
     const backBtn = document.getElementById('back-btn');
-
     const step1 = document.getElementById('step-1');
     const step2 = document.getElementById('step-2');
     const step3 = document.getElementById('step-3');
-
-    // Password Validation
+    const nextStep1Btn = document.getElementById('next-step-1');
+    const nextStep2Btn = document.getElementById('next-step-2');
+    const submitSignupBtn = document.getElementById('submit-signup');
     const passwordInput = document.getElementById('password');
     const togglePwBtn = document.getElementById('toggle-pw-btn');
     const reqLetter = document.getElementById('req-letter');
     const reqNumber = document.getElementById('req-number');
     const reqLength = document.getElementById('req-length');
-
-    // Toggle Password Visibility & Icon Change
     togglePwBtn.addEventListener('click', () => {
         const isPassword = passwordInput.type === 'password';
         passwordInput.type = isPassword ? 'text' : 'password';
-        
         const eyeIcon = document.getElementById('eye-icon');
         
         if (isPassword) {
-            // Ko odkriješ geslo -> navadno (neprečrtano) oko
             eyeIcon.innerHTML = `
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                 <circle cx="12" cy="12" r="3"></circle>
             `;
         } else {
-            // Ko skriješ geslo -> prečrtano oko
             eyeIcon.innerHTML = `
                 <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
                 <line x1="1" y1="1" x2="23" y2="23"></line>
             `;
         }
     });
-
-    // Real-time Password Checking
     passwordInput.addEventListener('input', () => {
         const val = passwordInput.value;
         
-        // 1 letter check
         const hasLetter = /[a-zA-Z]/.test(val);
         reqLetter.classList.toggle('valid', hasLetter);
 
-        // 1 number or special char check
         const hasNumOrSpec = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val);
         reqNumber.classList.toggle('valid', hasNumOrSpec);
 
-        // 10 chars check
         const hasLength = val.length >= 10;
         reqLength.classList.toggle('valid', hasLength);
     });
-
-    // Navigation & Step Logic
     function updateStepView() {
         step1.classList.remove('active');
         step2.classList.remove('active');
@@ -76,9 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
             stepCounter.textContent = 'Step 3 of 3';
         }
     }
-
-    // Step 1 -> Next Button
-    document.getElementById('next-step-1').addEventListener('click', () => {
+    nextStep1Btn.addEventListener('click', () => {
         const val = passwordInput.value;
         const hasLetter = /[a-zA-Z]/.test(val);
         const hasNumOrSpec = /[0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(val);
@@ -98,41 +91,71 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-
-    // Step 2 -> Next Button
-    document.getElementById('next-step-2').addEventListener('click', () => {
-        const nameVal = document.getElementById('name').value.trim();
-        const dayVal = document.getElementById('dob-day').value.trim();
-        const monthVal = document.getElementById('dob-month').value;
-        const yearVal = document.getElementById('dob-year').value.trim();
+    nextStep2Btn.addEventListener('click', () => {
+        const nameInput = document.getElementById('name').value.trim();
+        const dayInput = document.getElementById('dob-day').value.trim();
+        const monthSelect = document.getElementById('dob-month').value;
+        const yearInput = document.getElementById('dob-year').value.trim();
         const genderSelected = document.querySelector('input[name="gender"]:checked');
-
-        if (nameVal && dayVal && monthVal && yearVal && genderSelected) {
-            currentStep = 3;
-            updateStepView();
-        } else {
+        if (!nameInput) {
             Swal.fire({
-                title: 'Incomplete Details',
-                text: 'Please fill in all details before proceeding.',
-                icon: 'warning',
+                title: 'Error',
+                text: 'Please, input your name.',
+                icon: 'error',
                 confirmButtonColor: '#1ed760'
             });
+            return;
         }
+        if (!genderSelected) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Please, choose your gender.',
+                icon: 'error',
+                confirmButtonColor: '#1ed760'
+            });
+            return;
+        }
+        const day = parseInt(dayInput, 10);
+        const year = parseInt(yearInput, 10);
+        if (isNaN(day) || day < 1 || day > 31) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Day error.',
+                icon: 'error',
+                confirmButtonColor: '#1ed760'
+            });
+            return;
+        }
+        if (!monthSelect) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Please, choose a month.',
+                icon: 'error',
+                confirmButtonColor: '#1ed760'
+            });
+            return;
+        }
+        if (isNaN(year) || year < 1900 || year > 2026) {
+            Swal.fire({
+                title: 'Error',
+                text: 'Year error',
+                icon: 'error',
+                confirmButtonColor: '#1ed760'
+            });
+            return;
+        }
+        currentStep = 3;
+        updateStepView();
     });
-
-    // Back Button Click
     backBtn.addEventListener('click', () => {
         if (currentStep > 1) {
             currentStep--;
             updateStepView();
         } else {
-            // Optional: return to login or initial screen
             history.back();
         }
     });
-
-    // Final Sign Up Button
-    document.getElementById('submit-signup').addEventListener('click', () => {
+    submitSignupBtn.addEventListener('click', () => {
         Swal.fire({
             title: 'Account Created!',
             text: 'Welcome to Spotify.',

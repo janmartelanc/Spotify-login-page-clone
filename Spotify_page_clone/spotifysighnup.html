@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Spotify sign up</title>
     <link rel="stylesheet" href="spotifysignupcss.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <div id="glavni">
@@ -20,7 +21,7 @@
       <div id="forma">
         <form>
           <label for="email">Email address</label>
-          <input type="email" id="email" placeholder="name@domain.com" />
+          <input type="email" id="email" placeholder="name@domain.com" maxlength="30"/>
         </form>
       </div>
       <button type="submit" id="gumbzelen">Next</button>
@@ -42,7 +43,7 @@
         <a>Already have an account?</a>
       </div>
       <div id="reg">
-        <a href="spotify.html">Log in</a>
+        <a href="index.html.html">Log in</a>
       </div>
       <div id="konec">
         This site is protected by reCAPTCHA and the Google
@@ -50,5 +51,6 @@
         <a href="https://policies.google.com/terms">Terms of Service</a> apply.
       </div>
     </div>
+    <script src="scriptsighnup.js"></script>
   </body>
 </html>

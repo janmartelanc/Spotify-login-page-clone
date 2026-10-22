@@ -1,13 +1,11 @@
 * {
     box-sizing: border-box;
 }
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
-
 body {
     background-color: #121212;
     color: #ffffff;
@@ -17,31 +15,24 @@ body {
     align-items: center;
     min-height: 100vh;
 }
-
-/* Spotify Header Logo */
 .logo {
     margin-top: 100px;
     margin-bottom: 50px;
     text-align: center;
     width: 29px;
 }
-
-/* Progress bar container (fixed width matches design) */
 .progress-container {
     width: 435px;
     background-color: #525252;
     height: 2px;
     margin-bottom: 32px;
 }
-
 .progress-bar {
     background-color: #1ed760;
     height: 100%;
     width: 33.33%;
     transition: width 0.3s ease;
 }
-
-/* Main Container */
 .signup-container {
     width: 324px;
     display: flex;
@@ -49,19 +40,16 @@ body {
     flex: 1;
     height: 50px;
 }
-
-/* Step header & Back Arrow */
 .step-header {
     display: flex;
     align-items: center;
-    gap: 12px; /* Poskrbi za enakomerno razdaljo */
+    gap: 12px;
     margin-bottom: 12px;
     color: #a7a7a7;
     font-size: 14px;
     font-weight: 400;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .back-arrow {
     background: none;
     border: none;
@@ -75,11 +63,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .back-arrow:hover {
     color: #ffffff;
 }
-
 .step-title {
     font-size: 22px;
     font-weight: 700;
@@ -87,21 +73,15 @@ body {
     letter-spacing: -0.5px;
     font-family: 'Spotifybold',sans-serif;
 }
-
-/* Step Switching */
 .step-view {
     display: none;
 }
-
 .step-view.active {
     display: block;
 }
-
-/* Form Controls */
 .field-group {
     margin-bottom: 20px;
 }
-
 label {
     display: block;
     font-size: 14px;
@@ -109,7 +89,6 @@ label {
     margin-bottom: 8px;
     font-family: 'Spotifybold', sans-serif;
 }
-
 .input-subtitle {
     font-size: 14px;
     color: #b3b3b3;
@@ -117,13 +96,11 @@ label {
     line-height: 1.4;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .input-wrapper {
     position: relative;
     display: flex;
     align-items: center;
 }
-
 input[type="text"],
 input[type="password"],
 select {
@@ -138,18 +115,14 @@ select {
     transition: border-color 0.2s;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus,
 select:focus {
     border-color: #ffffff;
 }
-
 input.error, select.error {
     border-color: #e91429 !important;
 }
-
-/* Toggle Password Visibility Button */
 .toggle-password {
     position: absolute;
     right: 12px;
@@ -160,15 +133,12 @@ input.error, select.error {
     display: flex;
     align-items: center;
 }
-
-/* Password Requirements List */
 .requirements-title {
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 12px;
     font-family: 'Spotifybold', sans-serif;
 }
-
 .requirements-list {
     list-style: none;
     padding: 0;
@@ -177,14 +147,12 @@ input.error, select.error {
     color: #ffffff;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .requirements-list li {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
     transition: color 0.2s ease;
 }
-
 .req-dot {
     width: 12px;
     height: 12px;
@@ -195,24 +163,18 @@ input.error, select.error {
     box-sizing: border-box;
     position: relative;
 }
-
-/* Requirement valid state */
 .requirements-list li.valid {
     color: #ffffff;
 }
-
 .requirements-list li.valid .req-dot {
     border-color: #1ed760;
     background-color: #1ed760;
 }
-
-/* Date of Birth Grid */
 .dob-wrapper {
     display: grid;
     grid-template-columns: 70px 1fr 90px;
     gap: 8px;
 }
-
 select {
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a7a7a7'%3e%3path d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
@@ -222,15 +184,12 @@ select {
     padding-right: 24px;
     cursor: pointer;
 }
-
-/* Custom Radio Buttons */
 .gender-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 16px 20px;
     margin-top: 12px;
 }
-
 .radio-label {
     display: flex;
     align-items: center;
@@ -240,11 +199,9 @@ select {
     margin-bottom: 0;
     font-family: 'Spotifybold', sans-serif;
 }
-
 .radio-label input[type="radio"] {
     display: none;
 }
-
 .radio-custom {
     width: 16px;
     height: 16px;
@@ -254,11 +211,9 @@ select {
     position: relative;
     display: inline-block;
 }
-
 .radio-label input[type="radio"]:checked + .radio-custom {
     border-color: #1ed760;
 }
-
 .radio-label input[type="radio"]:checked + .radio-custom::after {
     content: "";
     width: 8px;
@@ -270,8 +225,6 @@ select {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-/* Custom Checkbox Containers (Step 3) */
 .checkbox-box {
     background-color: #ffffff1a;
     border-radius: 4px;
@@ -285,11 +238,9 @@ select {
     line-height: 1.4;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .checkbox-box input[type="checkbox"] {
     display: none;
 }
-
 .checkbox-custom {
     width: 16px;
     height: 16px;
@@ -300,12 +251,10 @@ select {
     flex-shrink: 0;
     position: relative;
 }
-
 .checkbox-box input[type="checkbox"]:checked + .checkbox-custom {
     background-color: #1ed760;
     border-color: #1ed760;
 }
-
 .checkbox-box input[type="checkbox"]:checked + .checkbox-custom::after {
     content: "";
     position: absolute;
@@ -317,13 +266,10 @@ select {
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
 }
-
 .checkbox-box a {
     color: #1ed760;
     text-decoration: underline;
 }
-
-/* Legal text block */
 .legal-text {
     font-size: 14px;
     color: white;
@@ -331,17 +277,13 @@ select {
     margin: 16px 0 24px 0;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .legal-text p {
     margin: 0 0 12px 0;
 }
-
 .legal-text a {
     color: #1ed760;
     text-decoration: underline;
 }
-
-/* Action Button */
 .btn-submit {
     width: 324px;
     height: 48px;
@@ -357,13 +299,10 @@ select {
     transition: transform 0.1s ease, background-color 0.1s ease;
     font-family: 'Spotifybold', sans-serif;
 }
-
 .btn-submit:hover {
     transform: scale(1.02);
     background-color: #1fdf64;
 }
-
-/* Footer info */
 .recaptcha-footer {
     text-align: center;
     font-size: 12px;
@@ -374,12 +313,36 @@ select {
     font-weight: 400;
     font-family: 'Spotifyregular', sans-serif;
 }
-
 .recaptcha-footer a {
     color: #a7a7a7;
     text-decoration: underline;
 }
-
+.req-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #727272;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    position: relative;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+.req-dot svg {
+    display: none;
+    width: 10px;
+    height: 10px;
+    fill: #000000; 
+}
+.requirements-list li.valid .req-dot {
+    background-color: #1ed760; 
+    border-color: #1ed760;
+}
+.requirements-list li.valid .req-dot svg {
+    display: block; 
+}
 @font-face {
     font-family: 'Spotifytitle';
     src: url('fonts/SpotifyMixUITitle-Extrabold-0c5c3edc175e50c855f03b34606885ef.woff2') format('woff2');
