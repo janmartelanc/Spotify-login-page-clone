@@ -9,6 +9,7 @@ A simple and visually faithful clone of the Spotify interface, mimicking the reg
 ## 🛠️ Technologies Used
 - HTML5
 - CSS3 (Flexbox, custom styling)
+- JS
 
 <h3>Login page :</h3>
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/bf7a1ce4-b7a6-4007-aad9-23d138b9be3a" />
