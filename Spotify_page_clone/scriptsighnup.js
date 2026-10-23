@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'spotifysighnup1.html';
             } else {
                 Swal.fire({
-                    title: 'Napaka',
-                    text: 'Prosim, vnesi veljaven e-poštni naslov.',
+                    title: 'Error',
+                    text: 'Enter valid email address.',
                     icon: 'error',
                     confirmButtonColor: '#1ed760'
                 });

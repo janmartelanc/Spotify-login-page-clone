@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const allowedPassword = 'example@gmail.com';
             if (email === allowedEmail && password === allowedPassword) {
                 Swal.fire({
-                    title: 'Login uspešen!',
+                    title: 'Login successful!',
                     icon: 'success',
                     confirmButtonColor: '#1ed760',
                     timer: 1500,
@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } else {
                 Swal.fire({
-                    title: 'Napaka',
-                    text: 'Napačen e-poštni naslov ali geslo.',
+                    title: 'Error',
+                    text: 'Wrong email or password.',
                     icon: 'error',
                     confirmButtonColor: '#1ed760'
                 });
